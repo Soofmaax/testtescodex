@@ -26,6 +26,10 @@ jobs:
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
+        with:
+          # Create/enable the Pages site automatically when the repository has
+          # not yet been configured from Settings → Pages.
+          enablement: true
 
       - name: Upload static site
         uses: actions/upload-pages-artifact@v3
