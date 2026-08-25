@@ -14,6 +14,12 @@ Ouvrez ensuite <http://localhost:4173>.
 
 Le workflow `.github/workflows/deploy-pages.yml` publie automatiquement le site à chaque push sur `main`.
 
+1. Créez un dépôt GitHub **public** et poussez cette branche sur `main`.
+2. Dans le dépôt GitHub, ouvrez **Settings → Pages**.
+3. Sous **Build and deployment → Source**, choisissez **GitHub Actions** et enregistrez.
+4. Ouvrez **Actions → Deploy to GitHub Pages**, puis lancez **Run workflow** sur `main`.
+
+Cette activation manuelle n'est nécessaire qu'une fois. Elle évite l'erreur `Resource not accessible by integration` que GitHub peut renvoyer lorsqu'un workflow essaie de créer lui-même le site Pages.
 1. Créez un dépôt GitHub et poussez cette branche sur `main`.
 2. Ouvrez l'onglet **Actions** et attendez la fin du workflow **Deploy to GitHub Pages**.
 
